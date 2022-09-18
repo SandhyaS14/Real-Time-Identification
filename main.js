@@ -24,6 +24,7 @@ function draw() {
     fill("blue");
     stroke("blue");
     square(noseX, noseY, 100);
+    document.getElementById("dimension").innerHTML = difference;
 }
 
 function gotResult(results) {
@@ -31,9 +32,9 @@ function gotResult(results) {
         console.log(results);
         noseX = results[0].pose.nose.x;
         noseY = results[0].pose.nose.y;
-        leftX = results[0].pose.leftWrist.x;
-        rightX = results[0].pose.rightWrist.x;
-        difference = rightX - leftX;
+        leftX = results[0].pose.leftwrist.x;
+        rightX = results[0].pose.rightwrist.x;
+        difference = floor(rightX - leftX);
         console.log(difference);
     }
 }
