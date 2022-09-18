@@ -23,7 +23,7 @@ function draw() {
     background("grey");
     fill("blue");
     stroke("blue");
-    sqaure(noseX, noseY, 100);
+    square(noseX, noseY, 100);
 }
 
 function gotResult(results) {
