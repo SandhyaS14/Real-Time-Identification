@@ -23,7 +23,7 @@ function draw() {
     background("grey");
     fill("blue");
     stroke("blue");
-    square(noseX, noseY, 100);
+    square(noseX, noseY, difference);
     document.getElementById("dimension").innerHTML = difference;
 }
 
@@ -34,7 +34,7 @@ function gotResult(results) {
         noseY = results[0].pose.nose.y;
         leftX = results[0].pose.leftWrist.x;
         rightX = results[0].pose.rightWrist.x;
-        difference = floor(rightX - leftX);
+        difference = floor(leftX - rightX);
         console.log(difference);
     }
 }
